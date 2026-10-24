@@ -1,0 +1,28 @@
+# PA cleanup rules. Edit thresholds to taste.
+
+[deny_paths]
+# Never touch these, even if asked.
+list = [
+    "C:/Windows",
+    "C:/Windows/System32",
+]
+
+[[size_rules]]
+name = "large_old_files"
+description = "Large files you haven't touched in years"
+min_size_mb = 100
+max_age_days = 730
+
+[[type_rules]]
+name = "junk_installers"
+description = "Old installers and disk images"
+extensions = [".exe", ".msi", ".dmg", ".iso"]
+max_age_days = 180
+
+[[junk_dir_rules]]
+name = "build_and_cache"
+description = "Common build / cache / temp folders"
+patterns = ["**/node_modules", "**/.git", "**/__pycache__", "**/*.cache", "**/Temp"]
+
+[quarantine]
+dir = ".pa-quarantine"
