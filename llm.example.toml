@@ -1,0 +1,20 @@
+# Template for llm.toml — copy it to llm.toml then fill in your choice.
+
+# Fully local & private (free):
+#   provider = "ollama"
+#   model = "qwen2.5:3b"        # run "ollama pull qwen2.5:3b" once
+
+# Free cloud tier — excellent quality:
+#   provider = "gemini"
+#   model = "gemini-2.0-flash"
+#   api_key = "PASTE_KEY"       # free from https://aistudio.google.com/apikey
+
+# Free cloud tier — super fast:
+#   provider = "groq"
+#   model = "llama-3.3-70b-versatile"
+#   api_key = "PASTE_KEY"       # free from https://console.groq.com
+
+[llm]
+provider = "none"
+model = ""
+api_key = ""
